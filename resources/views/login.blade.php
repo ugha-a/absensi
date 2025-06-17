@@ -20,10 +20,8 @@
             <div class="col-lg-5 col-12">
                 <div id="auth-left">
                     <div class="auth-logo d-flex justify-content-start">
-                        <div
-                            style="width: 150px; height: 150px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: #f0f0f0; font-weight: bold; font-size: 24px;">
-                            Absen
-                        </div>
+                        <img class="img-error rounded-circle" src="{{ asset('assets/dist/images/logo/logio.png') }}"
+                            alt="Not Found" style="width: 150px; height: 150px; object-fit: cover;">
                     </div>
                     <h1 class="auth-title">Log in.</h1>
                     @if (session()->has('loginError'))

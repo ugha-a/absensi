@@ -28,10 +28,10 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="logo">
                             <div class="d-flex align-items-center">
-                                <div
-                                    style="width: 150px; height: 150px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: #f0f0f0; font-weight: bold; font-size: 24px;">
-                                    Absen
-                                </div>
+                                <img class="img-error rounded-circle me-2"
+                                    src="{{ asset('assets/dist/images/logo/logio.png') }}" alt="Logo"
+                                    style="width: 60px; height: 60px;">
+                                {{-- <h1 class="text-blue mb-0" style="font-size: 1.2rem;">Tukang Absen</h1> --}}
                             </div>
 
                         </div>
