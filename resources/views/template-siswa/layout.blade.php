@@ -9,51 +9,56 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('assets/dist/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/dist/css/bootstrap.css') }}">
 
-    <link rel="stylesheet" href="{{asset('assets/dist/vendors/iconly/bold.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/dist/vendors/iconly/bold.css') }}">
 
-    <link rel="stylesheet" href="{{asset('assets/dist/vendors/perfect-scrollbar/perfect-scrollbar.css') }}">
-    <link rel="stylesheet" href="{{asset('assets/dist/vendors/bootstrap-icons/bootstrap-icons.css') }}">
-    <link rel="stylesheet" href="{{asset('assets/dist/css/app.css') }}">
-    <link rel="shortcut icon" href="{{asset('assets/dist/images/favicon.svg') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset('assets/dist/vendors/perfect-scrollbar/perfect-scrollbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/dist/vendors/bootstrap-icons/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/dist/css/app.css') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/dist/images/favicon.svg') }}" type="image/x-icon">
     @yield('css')
 </head>
 
 <body>
     <div id="app">
-       <div id="sidebar" class="active">
+        <div id="sidebar" class="active">
             <div class="sidebar-wrapper active">
-            <div class="sidebar-header">
-                <div class="d-flex justify-content-between align-items-center">
-                <div class="logo">
-                <div class="d-flex align-items-center">
-                    <img class="img-error rounded-circle me-2" src="{{ asset('assets/dist/images/logo/public.jpg') }}" alt="Logo" style="width: 60px; height: 60px;">
-                    <h1 class="text-blue mb-0" style="font-size: 1.2rem;">Tukang Absen</h1>
-                </div>
-                
-                </div>
-                <div class="dropdown">
-                    <a href="#" class="btn p-0" id="logoutMenu" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-ellipsis-v fa-lg"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="logoutMenu">
-                    <li>
-                        <form action="{{route('logout')}}" method="post" class="m-0">
-                        @csrf
-                        <button type="submit" class="dropdown-item text-white" style="background-color: #007bff; border-radius: 5px;">Logout</button>
-                        </form>
-                    </li>
-                    </ul>
-                </div>
-                <div class="toggler">
-                    <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
-                </div>
-                </div>
-            </div>
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="logo">
+                            <div class="d-flex align-items-center">
+                                <div
+                                    style="width: 150px; height: 150px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: #f0f0f0; font-weight: bold; font-size: 24px;">
+                                    Absen
+                                </div>
+                            </div>
 
-               <hr>
-                
+                        </div>
+                        <div class="dropdown">
+                            <a href="#" class="btn p-0" id="logoutMenu" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa fa-ellipsis-v fa-lg"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="logoutMenu">
+                                <li>
+                                    <form action="{{ route('logout') }}" method="post" class="m-0">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item text-white"
+                                            style="background-color: #007bff; border-radius: 5px;">Logout</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i
+                                    class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
                 <div class="sidebar-menu">
                     @include('template-siswa.sidebar')
                 </div>
@@ -77,20 +82,20 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
 
 
 
-    
+
     </div>
     </div>
-    <script src="{{asset('assets/dist/vendors/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
-    <script src="{{asset('assets/dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/dist/vendors/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('assets/dist/js/bootstrap.bundle.min.js') }}"></script>
 
-    <script src="{{asset('assets/dist/vendors/apexcharts/apexcharts.js') }}"></script>
-    <script src="{{asset('assets/dist/js/pages/dashboard.js') }}"></script>
+    <script src="{{ asset('assets/dist/vendors/apexcharts/apexcharts.js') }}"></script>
+    <script src="{{ asset('assets/dist/js/pages/dashboard.js') }}"></script>
 
-    <script src="{{asset('assets/dist/js/main.js') }}"></script>
+    <script src="{{ asset('assets/dist/js/main.js') }}"></script>
     @yield('js')
 </body>
 
